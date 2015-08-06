@@ -1,17 +1,20 @@
-doctype html
-html
-  head
-    title Join the #{community} community on Slack!
-    style.
-      body {
-        padding: 50px;
-        font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-      }
-      input {
-        font-size: 24px;
-        width: 400px;
-      }
-  body
-    h1= message
-    h2= error.status
-    pre #{error.stack}
+doctype
+html( lang="en" )
+    head
+        title Join the #{community} community on Slack!
+        meta( charset='utf-8' )
+        meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+        meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+        //- Bootswatch Theme
+        link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/darkly/bootstrap.min.css", rel="stylesheet")
+ 
+    body(style="padding:10rem;")
+        .container
+            .row
+                .jumbotron
+                    h1= message
+                    h2= error.status
+                    pre #{error.stack}
+
+        script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
+        script( src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' )
